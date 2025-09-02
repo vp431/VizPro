@@ -1,0 +1,393 @@
+/* Knowledge Competition Analysis - Custom CSS */
+/* This CSS only affects the Knowledge Competition Analysis interface */
+
+/* Container styling */
+.knowledge-competition-container {
+    background: #ffffff;
+    min-height: 100vh;
+    padding: 2rem;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Simple Header */
+.knowledge-competition-container .simple-header {
+    background: #ffffff;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 2rem;
+}
+
+.knowledge-competition-container .simple-title {
+    color: #495057;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* Input Card Styling */
+.knowledge-competition-container .input-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.knowledge-competition-container .input-card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 1rem 1.5rem;
+}
+
+.knowledge-competition-container .input-card-header h4 {
+    color: #495057;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.knowledge-competition-container .card-subtitle {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.knowledge-competition-container .input-card-body {
+    padding: 1.5rem;
+}
+
+/* Enhanced Input Groups */
+.knowledge-competition-container .input-group-enhanced {
+    margin-bottom: 1.5rem;
+}
+
+.knowledge-competition-container .input-label {
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.knowledge-competition-container .enhanced-textarea {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    resize: vertical;
+}
+
+.knowledge-competition-container .enhanced-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-1px);
+}
+
+.knowledge-competition-container .fact-textarea:focus {
+    border-color: #48bb78;
+    box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.1);
+}
+
+.knowledge-competition-container .counterfact-textarea:focus {
+    border-color: #f56565;
+    box-shadow: 0 0 0 3px rgba(245, 101, 101, 0.1);
+}
+
+.knowledge-competition-container .input-hint {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Example Section */
+.knowledge-competition-container .example-section {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.knowledge-competition-container .enhanced-dropdown {
+    border-radius: 10px;
+    border: 2px solid #e2e8f0;
+    font-size: 1rem;
+}
+
+/* Analyze Button */
+.knowledge-competition-container .analyze-btn {
+    background: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.knowledge-competition-container .analyze-btn:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Results Container */
+.knowledge-competition-container .results-container {
+    margin: 2rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Dashboard Cards */
+.knowledge-competition-container .dashboard-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.knowledge-competition-container .dashboard-card-header {
+    background: #f8f9fa;
+    color: #495057;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.knowledge-competition-container .dashboard-card-body {
+    padding: 1.5rem;
+}
+
+/* Panel specific spacing */
+.knowledge-competition-container .panel-description {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.knowledge-competition-container .layer-selection-container {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.knowledge-competition-container .layer-selection-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.knowledge-competition-container .slider-container {
+    padding: 0 1rem;
+}
+
+/* Removed info section styles - no longer needed */
+
+/* Loading Enhancement */
+.knowledge-competition-container .dash-loading {
+    margin: 3rem 0;
+}
+
+/* Status Cards */
+.knowledge-competition-container .welcome-card,
+.knowledge-competition-container .warning-card,
+.knowledge-competition-container .error-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    animation: slideInUp 0.6s ease-out;
+}
+
+.knowledge-competition-container .welcome-card .card-body {
+    padding: 3rem;
+}
+
+/* Animations */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Panel Styling */
+.knowledge-competition-container .competition-panel {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.knowledge-competition-container .competition-panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.knowledge-competition-container .panel-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-bottom: none;
+}
+
+.knowledge-competition-container .panel-body {
+    padding: 2rem;
+}
+
+/* Toggle Switch Enhancement */
+.knowledge-competition-container .fact-counterfact-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.knowledge-competition-container .toggle-label {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.knowledge-competition-container .toggle-label.active {
+    color: #667eea;
+}
+
+/* Interactive Elements */
+.knowledge-competition-container .interactive-element {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.knowledge-competition-container .interactive-element:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .knowledge-competition-container .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .knowledge-competition-container .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .knowledge-competition-container .input-card {
+        margin: -2rem 1rem 2rem 1rem;
+    }
+    
+    .knowledge-competition-container .input-card-body {
+        padding: 1.5rem;
+    }
+    
+    .knowledge-competition-container .feature-badges {
+        gap: 0.5rem;
+    }
+    
+    .knowledge-competition-container .feature-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Chart Container Styling */
+.knowledge-competition-container .chart-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 1rem 0;
+}
+
+/* Metrics Display */
+.knowledge-competition-container .metrics-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.knowledge-competition-container .metric-card {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.knowledge-competition-container .metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+}
+
+.knowledge-competition-container .metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4c63d2;
+    margin-bottom: 0.5rem;
+}
+
+.knowledge-competition-container .metric-label {
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}

@@ -1,0 +1,306 @@
+/* ========================================
+   ENTITY HIGHLIGHTING STYLES - DARK THEME
+   ======================================== */
+
+/* Person entities - Dark Blue */
+.entity-per, .entity-person {
+    background-color: #1e3a8a !important;
+    color: white !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    border: 1px solid #1e40af !important;
+}
+
+/* Organization entities - Dark Green */
+.entity-org, .entity-organization {
+    background-color: #166534 !important;
+    color: white !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    border: 1px solid #15803d !important;
+}
+
+/* Location entities - Dark Red */
+.entity-loc, .entity-location {
+    background-color: #991b1b !important;
+    color: white !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    border: 1px solid #dc2626 !important;
+}
+
+/* Miscellaneous entities - Dark Purple */
+.entity-misc, .entity-miscellaneous {
+    background-color: #581c87 !important;
+    color: white !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    border: 1px solid #7c3aed !important;
+}
+
+/* Date/Time entities - Dark Orange */
+.entity-date, .entity-time, .entity-datetime {
+    background-color: #c2410c !important;
+    color: white !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    border: 1px solid #ea580c !important;
+}
+
+/* Money/Currency entities - Dark Teal */
+.entity-money, .entity-currency {
+    background-color: #0f766e !important;
+    color: white !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    border: 1px solid #14b8a6 !important;
+}
+
+/* Percentage entities - Dark Pink */
+.entity-percent, .entity-percentage {
+    background-color: #be185d !important;
+    color: white !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    border: 1px solid #ec4899 !important;
+}
+
+/* Generic/Unknown entities - Dark Gray */
+.entity-unknown, .entity-other {
+    background-color: #374151 !important;
+    color: white !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-weight: 500 !important;
+    border: 1px solid #6b7280 !important;
+}
+
+/* Hover effects for all entity types */
+.entity-per:hover, .entity-person:hover,
+.entity-org:hover, .entity-organization:hover,
+.entity-loc:hover, .entity-location:hover,
+.entity-misc:hover, .entity-miscellaneous:hover,
+.entity-date:hover, .entity-time:hover, .entity-datetime:hover,
+.entity-money:hover, .entity-currency:hover,
+.entity-percent:hover, .entity-percentage:hover,
+.entity-unknown:hover, .entity-other:hover {
+    opacity: 0.8 !important;
+    transform: scale(1.05) !important;
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Entity legend styling */
+.entity-legend {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.entity-legend h6 {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.entity-legend .entity-legend-item {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Ensure consistent styling across all entity displays */
+mark.entity-per, mark.entity-person,
+mark.entity-org, mark.entity-organization,
+mark.entity-loc, mark.entity-location,
+mark.entity-misc, mark.entity-miscellaneous,
+mark.entity-date, mark.entity-time, mark.entity-datetime,
+mark.entity-money, mark.entity-currency,
+mark.entity-percent, mark.entity-percentage,
+mark.entity-unknown, mark.entity-other {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+
+/* ========================================
+   NER MODAL STYLING - MODERN DESIGN
+   ======================================== */
+
+/* NER Modal Container */
+.ner-modal-container {
+    background: white;
+    border-radius: 12px;
+    padding: 0;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* NER Header Section */
+.ner-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 0;
+}
+
+.ner-header h4 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.ner-header-subtitle {
+    margin: 0.5rem 0 0 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+/* NER Input Section */
+.ner-input-section {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.ner-input-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.ner-textarea {
+    width: 100%;
+    min-height: 80px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    resize: vertical;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+.ner-textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: 0;
+}
+
+.ner-error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+/* NER Results Section */
+.ner-results-container {
+    padding: 0;
+}
+
+.ner-loading {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+}
+
+.ner-result-card {
+    background: white;
+    border-radius: 0 0 12px 12px;
+}
+
+.ner-result-header {
+    background: #f8f9fa;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+.ner-result-body {
+    padding: 1.5rem;
+}
+
+.ner-text-section {
+    margin-bottom: 1.5rem;
+}
+
+.ner-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
+}
+
+.ner-highlighted-container {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 100px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.ner-analytics-row {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.ner-chart-container {
+    height: 250px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background: #fafbfc;
+}
+
+.ner-table-container {
+    min-height: 200px;
+}
+
+/* NER Info Section */
+.ner-info-section {
+    padding: 1rem 1.5rem;
+    background: #f8f9fa;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+}
+
+.ner-info-content {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.entity-legend-examples {
+    text-align: center;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.ner-explanation {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+}

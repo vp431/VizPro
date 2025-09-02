@@ -1,0 +1,359 @@
+/* Similarity Analysis Modal - Custom Styling */
+
+.similarity-analysis-modal-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 0;
+    margin: 0;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.similarity-analysis-header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem 2rem;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 3px solid #6f42c1;
+    position: relative;
+}
+
+.similarity-analysis-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6f42c1, #007bff, #17a2b8);
+}
+
+.similarity-analysis-header h4 {
+    color: #6f42c1;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.similarity-analysis-header-subtitle {
+    color: #6c757d;
+    margin: 0.5rem 0 0 0;
+    font-size: 1rem;
+}
+
+.similarity-analysis-content {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 0 0 15px 15px;
+    min-height: 500px;
+}
+
+.similarity-analysis-controls {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 2px solid #6f42c1;
+    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.1);
+}
+
+.similarity-analysis-control-group {
+    margin-bottom: 1rem;
+}
+
+.similarity-analysis-control-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.similarity-analysis-slider-container {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+}
+
+.similarity-analysis-button-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.similarity-analysis-analyze-btn {
+    background: linear-gradient(135deg, #6f42c1 0%, #007bff 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 2rem;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
+    transition: all 0.3s ease;
+}
+
+.similarity-analysis-analyze-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(111, 66, 193, 0.4);
+    background: linear-gradient(135deg, #007bff 0%, #6f42c1 100%);
+}
+
+.similarity-analysis-results-container {
+    margin-top: 2rem;
+}
+
+.similarity-analysis-stats-row {
+    margin-bottom: 2rem;
+}
+
+.similarity-analysis-stat-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 4px solid #6f42c1;
+}
+
+.similarity-analysis-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.similarity-analysis-stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+    color: #6f42c1;
+}
+
+.similarity-analysis-stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 0;
+    font-weight: 500;
+}
+
+.similarity-analysis-chart-container {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border-top: 4px solid #17a2b8;
+}
+
+.similarity-analysis-chart-header {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.similarity-analysis-clusters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.similarity-analysis-cluster-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #17a2b8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(23, 162, 184, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.similarity-analysis-cluster-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(23, 162, 184, 0.2);
+}
+
+.similarity-analysis-cluster-header {
+    background: linear-gradient(135deg, #17a2b8 0%, #6f42c1 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.similarity-analysis-cluster-size {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.similarity-analysis-cluster-body {
+    padding: 1.5rem;
+}
+
+.similarity-analysis-cluster-examples {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.similarity-analysis-example-item {
+    background: rgba(23, 162, 184, 0.05);
+    border-left: 4px solid #17a2b8;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.similarity-analysis-example-text {
+    color: #495057;
+    margin-bottom: 0.25rem;
+}
+
+.similarity-analysis-example-meta {
+    color: #6c757d;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.similarity-analysis-similarity-score {
+    background: #17a2b8;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.similarity-analysis-no-data {
+    text-align: center;
+    padding: 3rem;
+    color: #6c757d;
+}
+
+.similarity-analysis-no-data-icon {
+    font-size: 4rem;
+    color: #17a2b8;
+    margin-bottom: 1rem;
+}
+
+.similarity-analysis-no-data-title {
+    color: #17a2b8;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.similarity-analysis-info-section {
+    background: rgba(111, 66, 193, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-left: 4px solid #6f42c1;
+}
+
+.similarity-analysis-info-toggle {
+    background: transparent;
+    border: 2px solid #6f42c1;
+    color: #6f42c1;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.similarity-analysis-info-toggle:hover {
+    background: #6f42c1;
+    color: white;
+    transform: scale(1.05);
+}
+
+.similarity-analysis-info-content {
+    padding: 1rem 0;
+    color: #495057;
+    line-height: 1.6;
+}
+
+.similarity-analysis-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    color: #6c757d;
+}
+
+.similarity-analysis-loading .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3rem;
+    color: #6f42c1;
+}
+
+.similarity-analysis-error {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    border: 2px solid #dc3545;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #721c24;
+}
+
+/* Method selector */
+.similarity-analysis-method-selector {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.similarity-analysis-method-btn {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 2px solid #6f42c1;
+    background: transparent;
+    color: #6f42c1;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.similarity-analysis-method-btn.active {
+    background: #6f42c1;
+    color: white;
+}
+
+.similarity-analysis-method-btn:hover {
+    background: #6f42c1;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .similarity-analysis-content {
+        padding: 1rem;
+    }
+    
+    .similarity-analysis-header {
+        padding: 1rem;
+    }
+    
+    .similarity-analysis-clusters-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .similarity-analysis-method-selector {
+        flex-direction: column;
+    }
+}

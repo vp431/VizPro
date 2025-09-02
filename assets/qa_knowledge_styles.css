@@ -1,0 +1,878 @@
+/* QA Knowledge Assessment Styles */
+
+.qa-knowledge-assessment-container {
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    border-radius: 0;
+}
+
+/* Header Styles */
+.knowledge-header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.knowledge-header-title {
+    color: #2d3436;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.knowledge-header-subtitle {
+    color: #636e72;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Input Card Styles */
+.knowledge-input-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.knowledge-input-card .card-header {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    padding: 1rem 1.5rem;
+}
+
+.knowledge-input-card .card-body {
+    padding: 2rem;
+}
+
+/* Configuration Header */
+.config-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    padding: 1.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.config-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.config-header * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Configuration Card Body */
+.config-card-body {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+/* Main Content Container */
+.config-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Input Sections */
+.config-input-section {
+    background: rgba(248, 249, 250, 0.8);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(108, 92, 231, 0.1);
+    transition: all 0.3s ease;
+}
+
+.config-input-section:hover {
+    background: rgba(248, 249, 250, 1);
+    border-color: rgba(108, 92, 231, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.config-section-label {
+    color: #2d3436;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.config-section-label i {
+    color: #6c5ce7;
+    font-size: 1.2rem;
+}
+
+.config-help-text {
+    color: #636e72;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* Advanced Configuration Section */
+.config-advanced-section {
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.05) 0%, rgba(162, 155, 254, 0.05) 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid rgba(108, 92, 231, 0.1);
+    position: relative;
+}
+
+.config-advanced-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 49%, rgba(108, 92, 231, 0.03) 50%, transparent 51%);
+    border-radius: 15px;
+}
+
+.config-advanced-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Parameters Grid */
+.config-params-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.config-param-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid rgba(108, 92, 231, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.config-param-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.config-param-box:hover::before {
+    transform: scaleY(1);
+}
+
+.config-param-box:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(108, 92, 231, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.15);
+}
+
+.config-param-label {
+    color: #2d3436;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.config-param-label i {
+    color: #6c5ce7;
+    font-size: 1.1rem;
+}
+
+.config-param-desc {
+    color: #636e72;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Form Elements for Configuration */
+.config-textarea,
+.config-input {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+    resize: vertical;
+}
+
+.config-textarea:focus,
+.config-input:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25);
+    background: white;
+    outline: none;
+}
+
+.config-number-input,
+.config-select {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.config-number-input:focus,
+.config-select:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 0.15rem rgba(108, 92, 231, 0.25);
+    background: white;
+    outline: none;
+}
+
+.config-input-addon {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: white;
+    border: 2px solid #6c5ce7;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Action Buttons Section */
+.config-actions-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(108, 92, 231, 0.1);
+}
+
+.config-action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.config-primary-btn {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+    position: relative;
+    overflow: hidden;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.config-primary-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.config-primary-btn:hover::before {
+    left: 100%;
+}
+
+.config-primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4);
+    background: linear-gradient(135deg, #5f3dc4 0%, #9775fa 100%);
+}
+
+.config-primary-btn .btn-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.config-primary-btn .btn-subtext {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.config-secondary-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #6c5ce7;
+    color: #6c5ce7;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.config-secondary-btn:hover {
+    background: #6c5ce7;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.3);
+}
+
+.config-secondary-btn .btn-text {
+    font-weight: 600;
+}
+
+/* Compact Configuration Styles */
+.config-compact-content {
+    padding: 1rem;
+}
+
+.config-compact-label {
+    color: #2d3436;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.config-compact-label i {
+    color: #6c5ce7;
+    font-size: 1rem;
+}
+
+.config-compact-textarea,
+.config-compact-input {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.config-compact-textarea:focus,
+.config-compact-input:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 0.15rem rgba(108, 92, 231, 0.25);
+    background: white;
+    outline: none;
+}
+
+.config-compact-number,
+.config-compact-select {
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    padding: 0.625rem 0.75rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.config-compact-number:focus,
+.config-compact-select:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 0.15rem rgba(108, 92, 231, 0.25);
+    background: white;
+    outline: none;
+}
+
+.config-compact-addon {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: white;
+    border: 2px solid #6c5ce7;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.config-compact-primary-btn {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+    color: white;
+}
+
+.config-compact-primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+    background: linear-gradient(135deg, #5f3dc4 0%, #9775fa 100%);
+}
+
+.config-compact-secondary-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #6c5ce7;
+    color: #6c5ce7;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.config-compact-secondary-btn:hover {
+    background: #6c5ce7;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+/* Form Elements */
+.knowledge-label {
+    color: #2d3436;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.knowledge-label-small {
+    color: #636e72;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.knowledge-textarea,
+.knowledge-input {
+    border: 2px solid #ddd6fe;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.knowledge-textarea:focus,
+.knowledge-input:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25);
+    background: white;
+}
+
+.knowledge-input-small,
+.knowledge-select {
+    border: 2px solid #ddd6fe;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.knowledge-input-small:focus,
+.knowledge-select:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 0.15rem rgba(108, 92, 231, 0.25);
+    background: white;
+}
+
+/* Button Styles */
+.knowledge-btn-primary {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+.knowledge-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+    background: linear-gradient(135deg, #5f3dc4 0%, #9775fa 100%);
+}
+
+/* Results Area */
+.knowledge-results-area {
+    animation: fadeInUp 0.6s ease;
+}
+
+.knowledge-results-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Summary Cards */
+.knowledge-summary-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.knowledge-summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.knowledge-metric-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.knowledge-metric-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 0.25rem;
+}
+
+.knowledge-metric-desc {
+    font-size: 0.8rem;
+    color: #636e72;
+    font-style: italic;
+}
+
+/* Visualization Cards */
+.knowledge-viz-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.knowledge-viz-card .card-header {
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    padding: 1rem 1.5rem;
+}
+
+.knowledge-viz-card .card-body {
+    padding: 1.5rem;
+}
+
+/* Analysis Card */
+.knowledge-analysis-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.knowledge-analysis-card .card-header {
+    background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    padding: 1rem 1.5rem;
+}
+
+.knowledge-analysis-card .card-body {
+    padding: 1.5rem;
+}
+
+.knowledge-analysis-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #2d3436;
+    margin-bottom: 1rem;
+}
+
+.knowledge-criteria-list {
+    font-size: 0.9rem;
+    color: #636e72;
+    margin-bottom: 0;
+}
+
+.knowledge-criteria-list li {
+    margin-bottom: 0.25rem;
+}
+
+.knowledge-recommendations {
+    font-size: 0.95rem;
+    color: #2d3436;
+    margin-bottom: 0;
+}
+
+.knowledge-recommendations li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* Loading Styles */
+.knowledge-loading {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Knowledge Score Indicators */
+.knowledge-score-high {
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    color: white;
+}
+
+.knowledge-score-medium {
+    background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+    color: white;
+}
+
+.knowledge-score-low {
+    background: linear-gradient(135deg, #d63031 0%, #e84393 100%);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .qa-knowledge-assessment-container {
+        padding: 1rem;
+    }
+    
+    .knowledge-header {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .knowledge-header-title {
+        font-size: 1.8rem;
+    }
+    
+    .knowledge-input-card .card-body,
+    .knowledge-results-container {
+        padding: 1.5rem;
+    }
+    
+    .knowledge-metric-number {
+        font-size: 2rem;
+    }
+    
+    /* Configuration responsive styles */
+    .config-card-body {
+        padding: 1.5rem;
+    }
+    
+    .config-main-content {
+        gap: 1.5rem;
+    }
+    
+    .config-input-section {
+        padding: 1rem;
+    }
+    
+    .config-advanced-section {
+        padding: 1.5rem;
+    }
+    
+    .config-params-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .config-param-box {
+        padding: 1rem;
+    }
+    
+    .config-action-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .config-primary-btn,
+    .config-secondary-btn {
+        min-width: 100%;
+        padding: 0.875rem 1.5rem;
+    }
+    
+    .config-primary-btn .btn-text {
+        font-size: 1rem;
+    }
+    
+    .config-section-label {
+        font-size: 1rem;
+    }
+    
+    .config-header {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .config-textarea,
+    .config-input {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .config-number-input,
+    .config-select {
+        padding: 0.625rem 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .config-param-label {
+        font-size: 0.95rem;
+    }
+    
+    .config-param-desc {
+        font-size: 0.8rem;
+    }
+    
+    .config-help-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Hover Effects */
+.knowledge-viz-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.knowledge-analysis-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Scrollbar */
+.knowledge-textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.knowledge-textarea::-webkit-scrollbar-track {
+    background: #f1f3f4;
+    border-radius: 4px;
+}
+
+.knowledge-textarea::-webkit-scrollbar-thumb {
+    background: #6c5ce7;
+    border-radius: 4px;
+}
+
+.knowledge-textarea::-webkit-scrollbar-thumb:hover {
+    background: #5f3dc4;
+}
+
+/* Badge Styles */
+.badge.badge-primary {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.badge.badge-secondary {
+    background: linear-gradient(135deg, #636e72 0%, #b2bec3 100%);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Progress Indicators */
+.knowledge-progress {
+    height: 8px;
+    border-radius: 4px;
+    background: #ddd6fe;
+    overflow: hidden;
+}
+
+.knowledge-progress-bar {
+    height: 100%;
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+/* Tooltip Styles */
+.knowledge-tooltip {
+    background: rgba(45, 52, 54, 0.95);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Interactive Elements */
+.knowledge-interactive:hover {
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+/* Status Indicators */
+.knowledge-status-success {
+    color: #00b894;
+    font-weight: 600;
+}
+
+.knowledge-status-warning {
+    color: #fdcb6e;
+    font-weight: 600;
+}
+
+.knowledge-status-danger {
+    color: #d63031;
+    font-weight: 600;
+}

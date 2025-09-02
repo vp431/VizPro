@@ -1,0 +1,1718 @@
+/* Single-Page Transformers Visualization Tool - Custom Styling */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --body-bg: #ffffff;
+    --body-color: #212529;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.2s ease-in-out;
+}
+
+/* Main container with better responsive design */
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-bg);
+}
+
+/* Improved container spacing */
+.container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Remove default body margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    line-height: 1.6;
+    overflow-x: visible;
+}
+
+/* Layer styling with specific heights */
+#layer-1 {
+    height: auto;
+    min-height: 80px;
+    background-color: var(--light-color);
+    border-bottom: 2px solid #dee2e6;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    z-index: 100;
+    position: relative;
+}
+
+#layer-2 {
+    height: 25vh;
+    min-height: 180px;
+    padding: 10px 0;
+    background-color: #fafbfc;
+    z-index: 1;
+    position: relative;
+}
+
+/* Input Area Content Full Width Fix */
+.input-area-content,
+#input-area-content {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.analysis-area-content,
+#analysis-area-content {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Ensure containers use full width */
+.container-fluid .row .col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 auto !important;
+}
+
+#layer-3 {
+    height: 10vh;
+    min-height: 70px;
+    background-color: var(--light-color);
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+#layer-4 {
+    height: 15vh;
+    min-height: 100px;
+    padding: 10px 0;
+    z-index: 1;
+    position: relative;
+    background-color: #ffffff;
+}
+
+#layer-5 {
+    height: 38vh;
+    min-height: 250px;
+    padding: 10px 0;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+/* Control panel styling */
+.control-panel .form-label {
+    font-size: 0.85rem;
+    color: var(--dark-color);
+    margin-bottom: 4px;
+}
+
+.control-panel .Select-control {
+    min-height: 32px;
+}
+
+/* Card styling */
+.card {
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--box-shadow);
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.card-body {
+    padding: 1rem;
+    height: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button styling */
+.btn {
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 0.875rem;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Feature buttons styling */
+#feature-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+#feature-buttons .btn {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+/* Input area styling */
+#input-area {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Visualization area styling */
+#main-viz-area {
+    min-height: 200px;
+}
+
+/* Dropdown styling */
+.Select-control {
+    border-radius: var(--border-radius);
+    border: 1px solid #ced4da;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.Select-control:hover {
+    border-color: var(--primary-color);
+}
+
+.Select-control.is-focused {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* SIMPLE DROPDOWN FIX - CSS ONLY APPROACH */
+
+/* Ensure body and main containers allow overflow */
+body {
+    overflow: visible !important;
+}
+
+/* Make all containers allow dropdown overflow */
+.container-fluid,
+.row,
+.col,
+.card,
+.card-body {
+    overflow: visible !important;
+}
+
+/* Control panel specific overflow settings */
+.control-panel-card,
+.control-panel-card .card-body {
+    overflow: visible !important;
+    position: relative !important;
+}
+
+/* Dropdown container */
+.dash-dropdown {
+    position: relative !important;
+    z-index: 1000 !important;
+}
+
+/* Dropdown control */
+.dash-dropdown .Select-control {
+    position: relative !important;
+    z-index: 1001 !important;
+}
+
+/* Dropdown menu - positioned absolutely relative to dropdown container */
+.dash-dropdown .Select-menu-outer {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 999999 !important;
+    background: white !important;
+    border: 1px solid #ced4da !important;
+    border-top: none !important;
+    border-radius: 0 0 4px 4px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    max-height: 300px !important;
+    overflow-y: auto !important;
+}
+
+/* Ensure all Select menu components have highest z-index */
+.Select-menu-outer {
+    z-index: 999999 !important;
+}
+
+/* Dropdown menu content */
+.dash-dropdown .Select-menu {
+    position: relative !important;
+    background: white !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    max-height: none !important;
+}
+
+/* Dropdown options with multiline support */
+.dash-dropdown .Select-option {
+    padding: 8px 12px !important;
+    background: white !important;
+    cursor: pointer !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    line-height: 1.4 !important;
+    min-height: auto !important;
+}
+
+.dash-dropdown .Select-option:hover {
+    background: #f8f9fa !important;
+}
+
+.dash-dropdown .Select-option.is-selected {
+    background: #007bff !important;
+    color: white !important;
+}
+
+.dash-dropdown .Select-option.is-focused {
+    background: #e9ecef !important;
+}
+
+/* Ensure dropdown value text can wrap */
+.dash-dropdown .Select-value-label {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    line-height: 1.4 !important;
+}
+
+.dash-dropdown .Select-control {
+    min-height: 38px !important;
+    height: auto !important;
+}
+
+/* Remove old dropdown positioning code */
+
+/* Control panel improvements */
+.control-panel {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    height: auto;
+    min-height: 80px;
+    overflow: visible;
+    z-index: 100;
+    position: relative;
+}
+
+/* Input area improvements */
+.input-area .form-control,
+.input-area .form-select {
+    width: 100% !important;
+}
+
+/* Better spacing for labels */
+.fw-bold {
+    font-weight: 600 !important;
+}
+
+/* Ensure full width for all form elements */
+.form-control, .form-select, textarea, .dash-bootstrap-components textarea {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Fix for Dash Bootstrap Components textarea */
+.dash-bootstrap-components .form-control {
+    width: 100% !important;
+}
+
+/* Input area specific fixes */
+.input-area textarea,
+.input-area .form-control {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Fix input card width */
+.input-card .card-body {
+    width: 100% !important;
+    padding: 1rem !important;
+}
+
+.input-card textarea {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Card improvements */
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid #e3e6f0;
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    font-weight: 600;
+}
+
+/* Button improvements */
+.btn {
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+/* Radio button improvements */
+.form-check-input {
+    margin-right: 0.5rem;
+}
+
+/* Selected model display improvements */
+.selected-model-display {
+    padding: 0.3rem 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    min-height: 1.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+/* Compact control panel */
+.control-panel .card-body {
+    padding: 0.75rem !important;
+}
+
+.control-panel-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    height: auto;
+    min-height: 80px;
+    overflow: visible;
+    z-index: 100;
+    position: relative;
+}
+
+/* Fix control panel row width */
+.control-panel-card .row {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.control-panel-card .col-2,
+.control-panel-card .col-3,
+.control-panel-card .col-5 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+/* Custom dropdown positioning script will handle menu placement */
+
+/* Attention visualization improvements */
+.card-header .float-end {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-header .float-end .dropdown {
+    min-width: 80px;
+}
+
+/* Attention card body width fix */
+.attention-card .card-body {
+    width: 100% !important;
+}
+
+.attention-card .row {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+#attention-visualization-content {
+    width: 100% !important;
+}
+
+/* Radio button styling */
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Alert styling */
+.alert {
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 0.875rem;
+}
+
+/* Feature buttons styling */
+.feature-buttons-container {
+    min-height: 60px;
+    padding: 10px 0;
+}
+
+/* Input area styling */
+.input-area {
+    min-height: 300px;
+}
+
+/* Visualization area styling */
+.visualization-area {
+    min-height: 400px;
+}
+
+/* Details area styling */
+.details-area {
+    min-height: 200px;
+}
+
+/* Selected model display styling */
+.selected-model-display {
+    font-size: 0.85rem;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Modal styling */
+.modal-content {
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    background-color: var(--light-color);
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+    background-color: var(--light-color);
+}
+
+/* Container fluid adjustments */
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #layer-1 {
+        height: auto;
+        min-height: 120px;
+    }
+    
+    #layer-2 {
+        height: auto;
+        min-height: 200px;
+    }
+    
+    #layer-3 {
+        height: auto;
+        min-height: 80px;
+    }
+    
+    #layer-4 {
+        height: auto;
+        min-height: 120px;
+    }
+    
+    #layer-5 {
+        height: auto;
+        min-height: 300px;
+    }
+    
+    .main-container {
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    .control-panel .col {
+        margin-bottom: 10px;
+    }
+    
+    #feature-buttons {
+        justify-content: center;
+    }
+}
+
+/* Scrollbar styling for visualization area */
+#layer-5::-webkit-scrollbar {
+    width: 6px;
+}
+
+#layer-5::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#layer-5::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+#layer-5::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 123, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Utility classes */
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Disabled state styling */
+.btn:disabled,
+.form-control:disabled,
+.form-select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Feature button active state */
+.feature-btn-active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Layout toggle styling */
+.layout-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Help button styling */
+.help-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.help-buttons .btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fix visualization width issues */
+.plotly-graph-div {
+    max-width: 100% !important;
+    overflow: hidden;
+}
+
+/* Modal content width fixes */
+.modal-xl {
+    max-width: 95vw !important;
+}
+
+.modal-body {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 1rem;
+}
+
+/* Graph container responsive fixes */
+.js-plotly-plot {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Popup modal content fixes */
+.modal-content {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.modal-dialog {
+    max-width: 95vw;
+    margin: 1rem auto;
+}
+
+/* Responsive graph containers */
+.graph-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Fix for attention visualization content */
+#attention-visualization-content {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Ensure all cards are responsive */
+.card {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.card-body {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Multiline dropdown text support */
+.Select-option {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    line-height: 1.4 !important;
+    padding: 8px 12px !important;
+    min-height: auto !important;
+}
+
+.Select-value-label {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    line-height: 1.4 !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+}
+
+.Select-control {
+    min-height: 38px !important;
+    height: auto !important;
+}
+
+.Select-input {
+    height: auto !important;
+    min-height: 30px !important;
+}
+
+/* Dash dropdown multiline support */
+.dash-dropdown .Select-value {
+    line-height: 1.4 !important;
+    padding: 4px 8px !important;
+}
+
+.dash-dropdown .Select-placeholder {
+    line-height: 1.4 !important;
+    padding: 4px 8px !important;
+}
+
+/* Custom LIME Popup Styles - Professional and Compact */
+
+/* LIME Modal Container */
+.lime-modal-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #2c3e50;
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+/* LIME Header Section */
+.lime-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 1.25rem;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+.lime-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lime-header-subtitle {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* LIME Input Section */
+.lime-input-section {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0 0 6px 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.lime-input-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.lime-textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.lime-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* LIME Settings Row */
+.lime-settings-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.lime-setting-group {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 0.75rem;
+}
+
+.lime-setting-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* LIME Button */
+.lime-analyze-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.lime-analyze-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.lime-analyze-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* LIME Results Section */
+.lime-results-container {
+    margin-top: 1.5rem;
+}
+
+.lime-result-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.lime-result-header {
+    background: #f9fafb;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.lime-result-body {
+    padding: 1rem;
+}
+
+/* LIME Text Highlighting */
+.lime-highlighted-text {
+    padding: 1rem;
+    background: #fefefe;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    line-height: 1.6;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.lime-word-positive {
+    background-color: rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    color: #166534;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin: 0 1px;
+    font-weight: 500;
+}
+
+.lime-word-negative {
+    background-color: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    color: #991b1b;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin: 0 1px;
+    font-weight: 500;
+}
+
+/* LIME Chart Container */
+.lime-chart-container {
+    background: white;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+/* LIME Info Section */
+.lime-info-section {
+    margin-top: 1.5rem;
+}
+
+.lime-info-toggle {
+    background: #f0f9ff;
+    border: 1px solid #0ea5e9;
+    color: #0369a1;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lime-info-toggle:hover {
+    background: #e0f2fe;
+    border-color: #0284c7;
+}
+
+.lime-info-content {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.lime-info-content h6 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0369a1;
+    margin: 0 0 0.5rem 0;
+}
+
+.lime-info-content ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+.lime-info-content li {
+    margin-bottom: 0.25rem;
+}
+
+.lime-info-content strong {
+    color: #0369a1;
+}
+
+/* LIME Error Message */
+.lime-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.lime-error:not(:empty) {
+    display: block;
+}
+
+/* LIME Explanation Text */
+.lime-explanation {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+/* LIME Responsive Design */
+@media (max-width: 768px) {
+    .lime-settings-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .lime-input-section {
+        padding: 0.75rem;
+    }
+    
+    .lime-result-body {
+        padding: 0.75rem;
+    }
+}
+
+/* Custom Entropy Popup Styles - Professional and Compact */
+
+/* Entropy Modal Container */
+.entropy-modal-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #2c3e50;
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+/* Entropy Header Section */
+.entropy-header {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    color: white;
+    padding: 1rem 1.25rem;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+.entropy-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.entropy-header-subtitle {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Entropy Input Section */
+.entropy-input-section {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0 0 6px 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.entropy-input-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.entropy-textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.entropy-textarea:focus {
+    outline: none;
+    border-color: #17a2b8;
+    box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.1);
+}
+
+/* Entropy Button */
+.entropy-analyze-btn {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.entropy-analyze-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
+}
+
+.entropy-analyze-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Entropy Results Section */
+.entropy-results-container {
+    margin-top: 1.5rem;
+}
+
+.entropy-result-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.entropy-result-header {
+    background: #f9fafb;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.entropy-result-body {
+    padding: 1rem;
+}
+
+/* Entropy Chart Container */
+.entropy-chart-container {
+    background: white;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+/* Entropy Info Section */
+.entropy-info-section {
+    margin-top: 1.5rem;
+}
+
+.entropy-info-toggle {
+    background: #e0f7fa;
+    border: 1px solid #17a2b8;
+    color: #0c5460;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.entropy-info-toggle:hover {
+    background: #b2ebf2;
+    border-color: #138496;
+}
+
+.entropy-info-content {
+    background: #e0f7fa;
+    border: 1px solid #b2ebf2;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.entropy-info-content h6 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0c5460;
+    margin: 0 0 0.5rem 0;
+}
+
+.entropy-info-content ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+.entropy-info-content li {
+    margin-bottom: 0.25rem;
+}
+
+.entropy-info-content strong {
+    color: #0c5460;
+}
+
+/* Entropy Loading */
+.entropy-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #6b7280;
+}
+
+.entropy-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e5e7eb;
+    border-top: 3px solid #17a2b8;
+    border-radius: 50%;
+    animation: entropy-spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes entropy-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Entropy Error Message */
+.entropy-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.entropy-error:not(:empty) {
+    display: block;
+}
+
+/* Entropy Explanation Text */
+.entropy-explanation {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Custom Token Embeddings Popup Styles - Professional and Compact */
+
+/* Token Embed Modal Container */
+.token-embed-modal-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #2c3e50;
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+/* Token Embed Header Section */
+.token-embed-header {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 1rem 1.25rem;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+.token-embed-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.token-embed-header-subtitle {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Token Embed Input Section */
+.token-embed-input-section {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0 0 6px 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.token-embed-input-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.token-embed-textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.token-embed-textarea:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+/* Token Embed Settings Group */
+.token-embed-settings-group {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.token-embed-setting-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Token Embed Radio Button Spacing - Custom */
+.token-embed-radio-spacing {
+    font-size: 0.8rem;
+}
+
+.token-embed-radio-spacing .form-check {
+    margin-right: 2rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.token-embed-radio-spacing .form-check-input {
+    margin-top: 0.125rem;
+}
+
+.token-embed-radio-spacing .form-check-label {
+    font-size: 0.8rem;
+    color: #4b5563;
+    padding-left: 0.5rem;
+}
+
+/* Token Embed Results Section */
+.token-embed-results-container {
+    margin-top: 1.5rem;
+}
+
+.token-embed-result-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.token-embed-result-header {
+    background: #f9fafb;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.token-embed-result-body {
+    padding: 1rem;
+}
+
+/* Token Embed Chart Container */
+.token-embed-chart-container {
+    background: white;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+/* Token Embed Info Section */
+.token-embed-info-section {
+    margin-top: 1.5rem;
+}
+
+.token-embed-info-content {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.token-embed-info-content h6 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #155724;
+    margin: 0 0 0.5rem 0;
+}
+
+.token-embed-info-content ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+.token-embed-info-content li {
+    margin-bottom: 0.25rem;
+}
+
+.token-embed-info-content strong {
+    color: #155724;
+}
+
+/* Token Embed Loading */
+.token-embed-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #6b7280;
+}
+
+.token-embed-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e5e7eb;
+    border-top: 3px solid #28a745;
+    border-radius: 50%;
+    animation: token-embed-spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes token-embed-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Token Embed Error Message */
+.token-embed-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.token-embed-error:not(:empty) {
+    display: block;
+}
+
+/* Token Embed Explanation Text */
+.token-embed-explanation {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Custom Error Analysis Popup Styles - Professional and Compact */
+
+/* Error Analysis Modal Container */
+.error-analysis-modal-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #2c3e50;
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+/* Error Analysis Header Section */
+.error-analysis-header {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+    padding: 1rem 1.25rem;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+.error-analysis-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.error-analysis-header-subtitle {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Error Analysis Controls Section */
+.error-analysis-controls {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.error-analysis-control-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Error Analysis Radio Button Spacing - Custom */
+.error-analysis-radio-spacing {
+    font-size: 0.8rem;
+}
+
+.error-analysis-radio-spacing .form-check {
+    margin-right: 2rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.error-analysis-radio-spacing .form-check-input {
+    margin-top: 0.125rem;
+}
+
+.error-analysis-radio-spacing .form-check-label {
+    font-size: 0.8rem;
+    color: #4b5563;
+    padding-left: 0.5rem;
+}
+
+/* Error Analysis Results Section */
+.error-analysis-result-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.error-analysis-result-header {
+    background: #f9fafb;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.error-analysis-result-body {
+    padding: 1rem;
+}
+
+/* Error Analysis Chart Container */
+.error-analysis-chart-container {
+    background: white;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+/* Error Analysis Buttons Section */
+.error-analysis-buttons {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+}
+
+/* Error Analysis Details Section */
+.error-analysis-details {
+    margin-top: 1rem;
+}
+
+/* Error Analysis Info Section */
+.error-analysis-info-section {
+    margin-top: 1.5rem;
+}
+
+.error-analysis-info-content {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.error-analysis-info-content h6 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #991b1b;
+    margin: 0 0 0.5rem 0;
+}
+
+.error-analysis-info-content ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+.error-analysis-info-content li {
+    margin-bottom: 0.25rem;
+}
+
+.error-analysis-info-content strong {
+    color: #991b1b;
+}
+
+/* Error Analysis Explanation Text */
+.error-analysis-explanation {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Modal Width Reduction for All Popups */
+.modal-xl {
+    max-width: 75vw !important;
+}
+
+.modal-dialog {
+    max-width: 75vw !important;
+    margin: 1rem auto !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .lime-modal-container,
+    .entropy-modal-container,
+    .token-embed-modal-container,
+    .error-analysis-modal-container {
+        max-width: 90vw;
+    }
+    
+    .modal-xl,
+    .modal-dialog {
+        max-width: 90vw !important;
+        margin: 0.5rem auto !important;
+    }
+}

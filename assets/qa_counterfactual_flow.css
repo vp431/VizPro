@@ -1,0 +1,312 @@
+/* QA Counterfactual Data Flow Styles */
+
+.counterfactual-flow-container {
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #ffffff;
+    min-height: 100vh;
+    border-radius: 0;
+}
+
+/* Cards */
+.counterfactual-flow-container .card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.counterfactual-flow-container .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.counterfactual-flow-container .card-header {
+    background: #f8f9fa;
+    color: #495057;
+    border-radius: 8px 8px 0 0 !important;
+    border-bottom: 1px solid #e9ecef;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+}
+
+.counterfactual-flow-container .card-body {
+    padding: 1.5rem;
+    background: #ffffff;
+}
+
+/* Input Elements */
+.counterfactual-flow-container textarea,
+.counterfactual-flow-container input,
+.counterfactual-flow-container select {
+    border: 2px solid #ffeaa7;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 0.95rem;
+}
+
+.counterfactual-flow-container textarea:focus,
+.counterfactual-flow-container input:focus,
+.counterfactual-flow-container select:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 107, 0.25);
+    background: white;
+    outline: none;
+}
+
+/* Labels */
+.counterfactual-flow-container .fw-bold {
+    color: #2d3436;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.counterfactual-flow-container .btn-warning {
+    background: #ffc107;
+    border: 1px solid #ffc107;
+    border-radius: 6px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    color: #212529;
+    width: auto;
+    display: inline-block;
+}
+
+.counterfactual-flow-container .btn-warning:hover {
+    background: #e0a800;
+    border-color: #d39e00;
+    transform: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Alert Styling */
+.counterfactual-flow-container .alert {
+    border-radius: 12px;
+    border: none;
+    padding: 1.5rem 2rem;
+    backdrop-filter: blur(5px);
+}
+
+.counterfactual-flow-container .alert-info {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(238, 90, 36, 0.1) 100%);
+    border-left: 4px solid #ff6b6b;
+    color: #2d3436;
+}
+
+.counterfactual-flow-container .alert-success {
+    background: linear-gradient(135deg, rgba(0, 184, 148, 0.1) 0%, rgba(85, 239, 196, 0.1) 100%);
+    border-left: 4px solid #00b894;
+    color: #2d3436;
+}
+
+.counterfactual-flow-container .alert-warning {
+    background: linear-gradient(135deg, rgba(253, 203, 110, 0.1) 0%, rgba(255, 159, 67, 0.1) 100%);
+    border-left: 4px solid #fdcb6e;
+    color: #2d3436;
+}
+
+.counterfactual-flow-container .alert-danger {
+    background: linear-gradient(135deg, rgba(214, 48, 49, 0.1) 0%, rgba(232, 67, 147, 0.1) 100%);
+    border-left: 4px solid #d63031;
+    color: #2d3436;
+}
+
+/* Graph Container */
+.counterfactual-flow-container .js-plotly-plot {
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Modal Styles */
+#cf-detail-modal .modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+#cf-detail-modal .modal-header {
+    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    border: none;
+    padding: 1.5rem 2rem;
+}
+
+#cf-detail-modal .modal-body {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 2rem;
+}
+
+#cf-detail-modal .modal-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    border-radius: 0 0 15px 15px;
+    padding: 1rem 2rem;
+}
+
+/* Detail Information */
+.counterfactual-flow-container .text-info {
+    color: #6c5ce7 !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Factual vs Counterfactual Color Coding */
+.factual-highlight {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+.counterfactual-highlight {
+    background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+/* Loading States */
+.counterfactual-flow-container .loading {
+    text-align: center;
+    padding: 3rem;
+    color: #636e72;
+}
+
+.counterfactual-flow-container .loading i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: spin 2s linear infinite;
+    color: #ff6b6b;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hover Effects */
+.counterfactual-flow-container .card-header:hover {
+    background: linear-gradient(135deg, #e55656 0%, #d63031 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .counterfactual-flow-container {
+        padding: 1rem;
+    }
+    
+    .counterfactual-flow-container .card-body {
+        padding: 1.5rem;
+    }
+    
+    .counterfactual-flow-container .card-header {
+        padding: 1rem 1.5rem;
+    }
+    
+    #cf-detail-modal .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .counterfactual-flow-container .btn-warning {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Layer Detail Section */
+.layer-detail-card {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-top: 1rem;
+    animation: fadeInUp 0.5s ease;
+}
+
+.layer-detail-card .card-header {
+    background: #e3f2fd;
+    color: #1976d2;
+    border-bottom: 1px solid #bbdefb;
+}
+
+.insights-section {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.insights-section .text-info {
+    color: #17a2b8 !important;
+}
+
+/* Statistics Cards */
+.layer-detail-card .border-primary {
+    border-color: #007bff !important;
+}
+
+.layer-detail-card .border-warning {
+    border-color: #ffc107 !important;
+}
+
+.layer-detail-card .border-info {
+    border-color: #17a2b8 !important;
+}
+
+.layer-detail-card .border-success {
+    border-color: #28a745 !important;
+}
+
+/* Animation for layer detail */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Interactive elements */
+.counterfactual-flow-container .clickable {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.counterfactual-flow-container .clickable:hover {
+    transform: scale(1.02);
+}
+
+/* Progress indicators */
+.flow-progress {
+    height: 6px;
+    background: linear-gradient(90deg, #ff6b6b 0%, #ee5a24 100%);
+    border-radius: 3px;
+    animation: flowProgress 2s ease-in-out infinite;
+}
+
+@keyframes flowProgress {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}

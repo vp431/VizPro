@@ -1,4 +1,4 @@
-# Single-Page Transformers Visualization Tool
+# Transformers Visualization Tool
 
 An interactive web application for visualizing and analyzing transformer models with advanced explainability features. Built with Dash and supporting multiple NLP tasks including sentiment analysis, named entity recognition, and question answering.
 
@@ -251,4 +251,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ for the NLP community**
+**Built with ❤️ at IIT Delhi for the community**
